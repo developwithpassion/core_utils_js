@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'max-len': ['error', { code: 101 }],
+    'max-len': ['error', { code: 110 }],
     'no-duplicate-imports': ['error'],
     'no-new-func': ['off'],
     'no-useless-call': ['off'],
