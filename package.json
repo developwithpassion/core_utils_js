@@ -13,13 +13,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.8.7",
     "@babel/register": "^7.7.0",
+    "babel-jest": "^25.1.0",
     "chai": "^4.2.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-strongloop": "^2.1.0",
     "eslint-plugin-mocha": "^6.2.1",
     "husky": "^3.0.9",
+    "jest": "^25.1.0",
     "lint-staged": "^9.4.3",
     "mocha": "^6.2.2",
     "parcel": "^1.12.4",
@@ -29,13 +32,14 @@
     "build": "parcel build ./lib/index.js",
     "pretty": "prettier --config-precedence prefer-file --write \"lib/**/*.js\"",
     "lint": "eslint lib/**/*.js",
-    "test": "mocha --require @babel/register lib/**/*.spec.js"
+    "test": "jest",
+    "test-watch": "jest --watchAll"
   },
   "lint-staged": {
     "lib/**/*.js": [
-      "yarn pretty",
-      "yarn lint",
-      "yarn build",
+      "pnpm pretty",
+      "pnpm lint",
+      "pnpm build",
       "git add"
     ]
   },
