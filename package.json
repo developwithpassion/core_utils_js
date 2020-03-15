@@ -37,9 +37,9 @@
   },
   "lint-staged": {
     "lib/**/*.js": [
-      "pnpm pretty",
-      "pnpm lint",
-      "pnpm build",
+      "pnpm run pretty",
+      "pnpm run lint",
+      "pnpm run build",
       "git add"
     ]
   },
